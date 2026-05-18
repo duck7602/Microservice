@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ecommerce-service-registry
+server:
+  port: 8763
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

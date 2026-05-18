@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Xác nhận đơn hàng</title>
+    <style> body { font-family: Arial, sans-serif; } </style>
+</head>
+<body>
+<h2>Xin chào, <span th:text="${customerName}">Khách hàng</span>!</h2>
+<p>Cảm ơn bạn đã đặt hàng. Đơn hàng <strong th:text="${orderId}">#123</strong> của bạn đã được ghi nhận thành công.</p>
+
+<h3>Thông tin đơn hàng:</h3>
+<ul>
+    <li>Mã đơn: <span th:text="${orderId}"></span></li>
+    <li>Tổng tiền: <span th:text="${totalAmount}"></span> VND</li>
+</ul>
+
+<p>Chúng tôi sẽ gửi mail thông báo khi đơn hàng được giao.</p>
+<p>Trân trọng,<br>Đội ngũ hỗ trợ</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/ecommerce_auth_service?serverTimezone=UTC
+    username: root
+    password: duc123
+keycloak:
+  auth-server-url: http://localhost:8080
+  realm: dtn2508
+  resource: backend
+  credentials:
+    secret: 'tVWV11pbAX49asaHONHaln6pIf6XZysm'
+
+server:
+  port: 8189
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8763/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
